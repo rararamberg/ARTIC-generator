@@ -1,20 +1,26 @@
 # Project Overview
 
-## Project Name
+## Super Great Finder
 
-The name of your project with deployed URL.
+The name of your project with deployed URL. 
 
 ## Project Description
 
 Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+This application uses a NAME API to allow users to search for ITEMS. This application will display those ITEMS.
 
 ## API and Data Sample
 
 Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+URL
+```json
+// code goes here
+```
 
 ## Wireframes
 
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+[Wireframe] ()https://yourwireframe)
 
 ### MVP/PostMVP
 
@@ -23,9 +29,9 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 #### MVP 
 *These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Find and use external api //Allow user to serach
+- Render data on page //Render item image link and description
+- Allow user to choose favorites // On new search clear previous search results
 
 #### PostMVP  
 *These are examples only. Replace with your own Post-MVP features.*
@@ -52,6 +58,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 ## Priority Matrix
 
 Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
+[Priority Matric] ()
 
 ## Timeframes
 
@@ -59,8 +66,13 @@ Tell us how long you anticipate spending on each area of development. Be sure to
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
 
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
+| Component      | Priority | Estimated Time | Time Invested | Actual Time |
+| ---            | :---:    |  :---:         | :---:         | :---:       |
+| Working w/ API | H        | 3hrs           | 3.5hrs        | 3.5hrs      |
+| Working w/ API | H        | 3hrs           | 3.5hrs        | 3.5hrs      |
+| Working w/ API | H        | 3hrs           | 3.5hrs        | 3.5hrs      |
+| Working w/ API | H        | 3hrs           | 3.5hrs        | 3.5hrs      |
+| Working w/ API | H        | 3hrs           | 3.5hrs        | 3.5hrs      |
 | Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
 | Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
 | Total | H | 6hrs| 5hrs | 5hrs |
