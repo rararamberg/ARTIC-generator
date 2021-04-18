@@ -1,22 +1,19 @@
 # Project Overview
 
-## Super Great Finder
-
-ARTIC Artwork Generator
+## ARTIC Artwork Generator
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
 This application uses the Art Institute of Chicago API to allow users to search for Artworks that have been on display based on museums' departments and categories of art. This application will display those artworks based off of user selection in drop down menus.
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need.
 
 ARTIC has two separate APIs, one for archive of artwork data and another specifically for artworks images.
 
 Artwork URL : https://api.artic.edu/api/v1/artworks?page=2&limit=100
 Image URL: https://www.artic.edu/iiif/2/{identifier}/full/843,/0/default.jpg
+[Sample Image URL] https://www.artic.edu/iiif/2/8b687509-2df3-6b1e-5487-f437fa02a1b5/full/843,/0/default.jpg
 Note: 'Identifier' = image_id
 ```json
 {
@@ -219,34 +216,30 @@ Note: 'Identifier' = image_id
 ## Wireframes
 
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
-[Wireframe] ()https://yourwireframe)
+[Wireframe Desktop] ()https://wireframe.cc/PUV4ni)
+
+[Wireframe Mobile] ()https://wireframe.cc/Ubi4Qr)
 
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
 - 2 APIs (Image and Artwork)
 - 2 Dropdown menu (Department, Category) pulls data into app
-- Render data on page //Render items' title, date, date display, image, department, image link and description
+- Render items' title, artist, date, date display, image, department, image link and description
 - On new search clear previous search results
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
 
 - Another dropdown for classification
-- Random button pulls random artwork
-- For each category or department a new header image is displayed.
+- Hamburger menu to show and hide drop down menus
+- For each category or department option a new header image is displayed and sub title.
 - Link more info on artwork
-- Pull only current artwork on display and gallery info
+- (Pull only current artwork on display and gallery info?)
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
+This schedule will be used to keep track of my progress throughout the week and align with course expectations.  
 
 |  Day | Deliverable | Status
 |---|---| ---|
@@ -254,34 +247,42 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |April 19| Project Approval | Incomplete
 |April 19| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |April 19| Pseudocode JS Steps | Incomplete
-|April 20| Append Data to Option Values in Drop Down Menu | Incomplete
-|April 20|  Link both APIs Artworrk to Image | Incomplete
-|April 20|  Append Results to DOM | Incomplete
-|April 21| MVP Requirements  | Incomplete
+|April 19| API request for Dropdowns | Incomplete
+|April 19| Append Data to Option Tags in Drop Down Menu | Incomplete
+|April 20| Get Option Values in Drop Down Menu | Incomplete
+|April 20| Drop Down Menu Event Handlers| Incomplete
+|April 20|  Get values for Result artwork info | Incomplete
+|April 20|  API Image request for Artwork image tags | Incomplete
+|April 21|  Append Results to DOM | Incomplete
+|April 21|  Remove Previous Results | Incomplete
+|April 21|  CSS Flex and Media Queries | Incomplete
+|April 21| Testing MVP Requirements  | Incomplete
 |April 22| Post-MVP and Advanced CSS | Incomplete
 |April 23| Presentations | Incomplete
 
 ## Priority Matrix
 
 Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
-[Priority Matric] ()
+[Priority Matrix] (https://wireframe.cc/6bvAs1)
 
 ## Timeframes
-
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
 
 | Component      | Priority | Estimated Time | Time Invested | Actual Time |
 | ---            | :---:    |  :---:         | :---:         | :---:       |
 | Core Application Structure (HTML, CSS, etc.) | H        |4.5hrs           | Xhrs        | Xhrs      |
-| Pseudocode | H        | 2.5hrs           | Xhrs        | Xhrs      |
-| Append Data to Option Values in Drop Down Menu | H        | 3hrs           | 3.5hrs        | 3.5hrs      |
-| Link both APIs Artworrk to Image | H        | 3hrs           | 3.5hrs        | 3.5hrs      |
-| Working w/ API | H        | 3hrs           | 3.5hrs        | 3.5hrs      |
-|  Append Results to DOM | H | 3hrs| 3.5hrs | 3.5hrs |
-| Post-MVP and Advanced CSS | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 40hrs| 0hrs | 0hrs |
+| Pseudocode JS Steps                          | H        |1.0hrs           | Xhrs        | Xhrs      |
+| JS: API request for Dropdowns                | H        |2.0hrs           | Xhrs        | Xhrs      |
+| JS: Append Data to Option Tags in Dropdowns  | H        |2.5hrs           | Xhrs        | Xhrs      |
+|JS: Get Option Values in Drop Down Menu       | H        |2.5hrs           | Xhrs        | Xhrs      |
+|JS: Drop Down Menu Event Handlers             | H        |2.0hrs           | Xhrs        | Xhrs      |
+| JS: Get values for Result artwork info       | H        |3.5hrs           | Xhrs        | Xhrs      |
+|JS: API Image request for Artwork image tags  | H        |4.0hrs           | Xhrs        | Xhrs      |
+|JS:  Append Results to DOM                    | H        |4.0hrs           | Xhrs        | Xhrs      |
+|JS: Remove Previous Results                   | H        |2.0hrs           | Xhrs        | Xhrs      |
+|CSS: Flex and Media Queries                   | H        |4.5hrs           | Xhrs        | Xhrs      |
+|Testing MVP Requirements                      | H/M      |1.5hrs           | Xhrs        | Xhrs      |
+| Post-MVP and Advanced CSS                    | L        |6.5hrs           | Xhrs        | Xhrs      |
+| Total | H | 40.5hrs| Xhrs | Xhrs |
 
 ## Code Snippet
 
