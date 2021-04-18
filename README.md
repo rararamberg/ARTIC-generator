@@ -12,8 +12,14 @@ This application uses the Art Institute of Chicago API to allow users to search 
 ARTIC has two separate APIs, one for archive of artwork data and another specifically for artworks images.
 
 Artwork URL : https://api.artic.edu/api/v1/artworks?page=2&limit=100
+
+
 Image URL: https://www.artic.edu/iiif/2/{identifier}/full/843,/0/default.jpg
+
+
 [Sample Image URL] https://www.artic.edu/iiif/2/8b687509-2df3-6b1e-5487-f437fa02a1b5/full/843,/0/default.jpg
+
+
 Note: 'Identifier' = image_id
 ```json
 {
