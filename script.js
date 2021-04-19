@@ -12,9 +12,9 @@ const getMenuOptions = async () => {
     for (let i = 0; i < response.data.data.length; i++){
       // console.log(response.data.data[i].department_title);
       // console.log(response.data.data[i].classification_title);
-      let deptItem = Object.values(response.data.data[i].department_title);
+      let deptItem = response.data.data[i].department_title;
       setDeptOptions(deptItem)
-      let mediumList = Object.values(response.data.data[i].classification_title);
+      let mediumList = response.data.data[i].classification_title;
       setMediumOption(mediumList)
     }
     // console.log(response.data.data);
