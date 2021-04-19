@@ -269,7 +269,6 @@ This schedule will be used to keep track of my progress throughout the week and 
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
 [Priority Matrix] (https://wireframe.cc/6bvAs1)
 
 ## Timeframes
