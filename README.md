@@ -4,7 +4,7 @@
 
 ## Project Description
 
-This application uses the Art Institute of Chicago API to allow users to search for Artworks that have been on display based on museums' departments and categories of art. This application will display those artworks based off of user selection in drop down menus.
+This application uses the Art Institute of Chicago API to allow users to pull up art pieces that have been through the museum. This application will display those artworks based off of user selection in drop down menus labeled by museum's departments or categories of art.
 
 ## API and Data Sample
 
