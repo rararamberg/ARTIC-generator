@@ -253,9 +253,9 @@ This schedule will be used to keep track of my progress throughout the week and 
 |April 16-18| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |April 19| Project Approval | Complete
 |April 19| Core Application Structure (HTML, CSS, etc.) | Complete
-|April 19| Pseudocode JS Steps | Incomplete
-|April 19| API request for Dropdowns | Incomplete
-|April 19| Append Data to Option Tags in Drop Down Menu | Incomplete
+|April 19| Pseudocode JS Steps | Complete
+|April 19| API request for Dropdowns | Complete
+|April 19| Append Data to Option Tags in Drop Down Menu | Complete
 |April 20| Get Option Values in Drop Down Menu | Incomplete
 |April 20| Drop Down Menu Event Handlers| Incomplete
 |April 20|  Get values for Result artwork info | Incomplete
@@ -275,10 +275,10 @@ This schedule will be used to keep track of my progress throughout the week and 
 
 | Component      | Priority | Estimated Time | Time Invested | Actual Time |
 | ---            | :---:    |  :---:         | :---:         | :---:       |
-| Core Application Structure (HTML, CSS, etc.) | H        |4.5hrs           | Xhrs        | Xhrs      |
-| Pseudocode JS Steps                          | H        |1.0hrs           | Xhrs        | Xhrs      |
-| JS: API request for Dropdowns                | H        |2.0hrs           | Xhrs        | Xhrs      |
-| JS: Append Data to Option Tags in Dropdowns  | H        |2.5hrs           | Xhrs        | Xhrs      |
+| Core Application Structure (HTML, CSS, etc.) | H        |4.5hrs           | 3hrs        | Xhrs      |
+| Pseudocode JS Steps                          | H        |1.0hrs           | .5hrs        | Xhrs      |
+| JS: API request for Dropdowns                | H        |2.0hrs           | 2hrs        | Xhrs      |
+| JS: Append Data to Option Tags in Dropdowns  | H        |2.5hrs           | 2hrs        | Xhrs      |
 |JS: Get Option Values in Drop Down Menu       | H        |2.5hrs           | Xhrs        | Xhrs      |
 |JS: Drop Down Menu Event Handlers             | H        |2.0hrs           | Xhrs        | Xhrs      |
 | JS: Get values for Result artwork info       | H        |3.5hrs           | Xhrs        | Xhrs      |

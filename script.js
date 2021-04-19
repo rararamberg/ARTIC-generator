@@ -9,15 +9,29 @@ const getMenuOptions = async () => {
   const url = 'https://api.artic.edu/api/v1/artworks?limit=100'
   try {
     const response = await axios.get(url);
+    let deptArr = [];
+    let medArr = [];
     for (let i = 0; i < response.data.data.length; i++){
       // console.log(response.data.data[i].department_title);
       // console.log(response.data.data[i].classification_title);
       let deptItem = response.data.data[i].department_title;
-      setDeptOptions(deptItem)
-      let mediumList = response.data.data[i].classification_title;
-      setMediumOption(mediumList)
+      deptArr.push(deptItem);
+      
+      let mediumList = response.data.data[i].classification_title
+      medArr.push(mediumList);
     }
-    // console.log(response.data.data);
+    let filterDeptItems = deptArr.filter((val, index, val2) => {
+      return val2.indexOf(val) === index 
+    })
+    let filterMedItems = medArr.filter((val, index, val2) => {
+      return val2.indexOf(val) === index 
+    })
+    console.log(filterDeptItems)
+    console.log(filterMedItems)
+    setDeptOptions(filterDeptItems)
+    setMediumOption(filterMedItems)
+    // console.log(newArr)
+    // console.log(response.data.data[0]);
   }
   catch (error) {
     console.error(error);
@@ -30,20 +44,25 @@ getMenuOptions()
 // A. DEPARTMENT
 // B. CATEGORIES
 function setDeptOptions(item) {
+  for (let i = 0; i < item.length; i++) {
   const selectTag = document.querySelector('#select-dept');
   const optionTag = document.createElement('option');
-  optionTag.textContent = item
-  optionTag.value = item
+  optionTag.textContent = item[i]
+  optionTag.value = item[i]
   selectTag.append(optionTag);
+  }
+  
 
 }
 
 function setMediumOption(item) {
-  const selectTag = document.querySelector('#select-medium');
-  const optionTag = document.createElement('option');
-  optionTag.textContent = item
-  optionTag.value = item
-  selectTag.append(optionTag);
+  for (let i = 0; i < item.length; i++) {
+    const selectTag = document.querySelector('#select-medium');
+    const optionTag = document.createElement('option');
+    optionTag.textContent = item[i]
+    optionTag.value = item[i]
+    selectTag.append(optionTag);
+    }
 }
 
 

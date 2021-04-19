@@ -11,7 +11,8 @@ header {
 .artic-icon {
   width: 200px;
   height: 200px;
-  background-color: paleturquoise;
+  background-image: url('https://chicagoculturalalliance.org/wp-content/uploads/2018/04/Art-Institute.png');
+  background-size: contain;
   position: relative;
   top: 80px;
   left: 5px;
@@ -20,7 +21,9 @@ header {
 }
 
 .page-heading {
-  background-color: bisque;
+  background-image: url('https://cdn.theculturetrip.com/wp-content/uploads/2019/05/feature_j87t9a.jpg');
+  background-size: cover;
+  background-position: center;
   padding: 150px 10px 10px 10px;
   width: 75%;
   height: 350px;
@@ -34,12 +37,14 @@ header {
 .title {
   background-color: palegreen;
   width: 550px;
+  padding-left: 20px;
+  margin-left: 10px;
 }
 
 /* MAIN */
 .results-box {
   width: 60%;
-  height: 550px;
+  height: 450px;
   background-color: lightsalmon;
   display: block;
   position: relative;
@@ -62,7 +67,7 @@ footer {
   text-align: center;
   background-color: palevioletred;
   padding: 10px;
-  height: 80px;
+  height: 100px;
   width: 100%;
   position: relative;
   bottom: 0px;
@@ -70,6 +75,8 @@ footer {
 
 footer p {
   font-size: 12px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
 }
 li {
   display: inline;
