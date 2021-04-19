@@ -250,7 +250,7 @@ This schedule will be used to keep track of my progress throughout the week and 
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|April 16-18| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|April 16-18| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |April 19| Project Approval | Incomplete
 |April 19| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |April 19| Pseudocode JS Steps | Incomplete
