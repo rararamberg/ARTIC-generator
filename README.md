@@ -237,7 +237,7 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 #### PostMVP  
 
-- Another dropdown for classification
+- Another dropdown for display year
 - Hamburger menu to show and hide drop down menus
 - For each category or department option a new header image is displayed and sub title.
 - Link more info on artwork
