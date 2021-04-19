@@ -1,0 +1,92 @@
+* {
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+header {
+  max-height: 400px;
+}
+.artic-icon {
+  width: 200px;
+  height: 200px;
+  background-color: paleturquoise;
+  position: relative;
+  top: 80px;
+  left: 5px;
+  margin: 10px;
+  
+}
+
+.page-heading {
+  background-color: bisque;
+  padding: 150px 10px 10px 10px;
+  width: 75%;
+  height: 350px;
+  position: relative;
+  top: -195px;
+  right: -275px;
+  margin: 10px;
+  
+}
+
+.title {
+  background-color: palegreen;
+  width: 550px;
+}
+
+/* MAIN */
+.results-box {
+  width: 60%;
+  height: 550px;
+  background-color: lightsalmon;
+  display: block;
+  position: relative;
+  left: 375px;
+  bottom: 300px;
+}
+
+form {
+  background-color: paleturquoise;
+  width: fit-content;
+  padding: 60px 20px 20px 20px;
+  height: 300px
+  /* display: block;
+  margin-top: 20px; */
+}
+
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background-color: palevioletred;
+  padding: 10px;
+  height: 80px;
+  width: 100%;
+  position: relative;
+  bottom: 0px;
+}
+
+footer p {
+  font-size: 12px;
+}
+li {
+  display: inline;
+  padding: 5px;
+}
+
+.icon img {
+  height: 25px;
+  width: auto;
+  /* background-color: white; */
+}
+
+.icon img:hover {
+  cursor: pointer;
+  /* background-color: #009088; */
+}
+
+ul {
+  padding-left: 0px;
+}

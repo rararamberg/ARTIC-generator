@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script defer src="./script.js"></script>
+  <title>ARTIC Generator</title>
+</head>
+<body>
+  <header>
+    <div class="artic-icon">ARTIC icon</div>
+    <div class="page-heading">
+      <div class="title">
+        <h1>Welcome to the ARTIC Generator!</h1>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <form class="menus">
+        <select id="dept-menu">
+          <option disabled selected>Choose a Department</option>
+        </select>
+        <button id="submit-dept">Submit</button>
+        <p>OR</p>
+        <select id="categ-menu">
+          <option disabled selected>Choose a Category</option>
+        </select>
+        <button id="submit-categ">Submit</button>
+      </form>
+    
+      <div class="results-box">
+          <!-- artwork divs will go here -->
+      </div>
+       <!-- end results-box div -->
+    </div>
+    <!-- end container div -->
+  </main>
+  <footer>
+    <ul id="footer-bar">
+      <li class="icon" id="linkedin">
+        <a href="https://www.linkedin.com/in/rachelramberg/" target="_blank">
+          <img src="https://res.cloudinary.com/briandanger/image/upload/v1568954107/linkedin_vnvo6s.png" alt="linkedin-icon">
+        </a>
+      </li>
+      <li class="icon" id="github">
+        <a href="https://github.com/rararamberg" target="_blank">
+          <img src="https://res.cloudinary.com/briandanger/image/upload/v1568954107/github_fpykxh.png" alt="github-icon">
+        </a>
+      </li>
+      <li>
+        <p>© RAR 2021</p>
+      </li>
+    </ul>
+  </footer>
+</body>
+</html>
