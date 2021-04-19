@@ -232,12 +232,13 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 - 2 APIs (Image and Artwork)
 - 2 Dropdown menu (Department, Category) pulls data into app
-- Render items' title, artist, date, date display, image, department, image link and description
+- Render result items'info: title, artist, date, image, department, category.
 - On new search clear previous search results
 
 #### PostMVP  
 
 - Another dropdown for display year
+- Include more info: origin, medium or artwork type.
 - Hamburger menu to show and hide drop down menus
 - For each category or department option a new header image is displayed and sub title.
 - Link more info on artwork
