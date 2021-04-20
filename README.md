@@ -279,12 +279,12 @@ This schedule will be used to keep track of my progress throughout the week and 
 | Pseudocode JS Steps                          | H        |1.0hrs           | .5hrs        | Xhrs      |
 | JS: API request for Dropdowns                | H        |2.0hrs           | 2hrs        | Xhrs      |
 | JS: Append Data to Option Tags in Dropdowns  | H        |2.5hrs           | 2hrs        | Xhrs      |
-|JS: Get Option Values in Drop Down Menu       | H        |2.5hrs           | Xhrs        | Xhrs      |
-|JS: Drop Down Menu Event Handlers             | H        |2.0hrs           | Xhrs        | Xhrs      |
-| JS: Get values for Result artwork info       | H        |3.5hrs           | Xhrs        | Xhrs      |
-|JS: API Image request for Artwork image tags  | H        |4.0hrs           | Xhrs        | Xhrs      |
-|JS:  Append Results to DOM                    | H        |4.0hrs           | Xhrs        | Xhrs      |
-|JS: Remove Previous Results                   | H        |2.0hrs           | Xhrs        | Xhrs      |
+|JS: Get Option Values in Drop Down Menu       | H        |2.5hrs           | 1hrs        | Xhrs      |
+|JS: Drop Down Menu Event Handlers             | H        |2.0hrs           | 1hrs        | Xhrs      |
+| JS: Get values for Result artwork info       | H        |3.5hrs           | 2hrs        | Xhrs      |
+|JS: API Image request for Artwork image tags  | H        |4.0hrs           | .5hrs        | Xhrs      |
+|JS:  Append Results to DOM                    | H        |4.0hrs           | 2hrs        | Xhrs      |
+|JS: Remove Previous Results                   | H        |2.0hrs           | 1hrs        | Xhrs      |
 |CSS: Flex and Media Queries                   | H        |4.5hrs           | Xhrs        | Xhrs      |
 |Testing MVP Requirements                      | H/M      |1.5hrs           | Xhrs        | Xhrs      |
 | Post-MVP and Advanced CSS                    | L        |6.5hrs           | Xhrs        | Xhrs      |
