@@ -142,6 +142,7 @@ function createArtInfo(data) {
   artDiv.insertAdjacentHTML('beforeend', artInfo);
 
   console.log(artDiv);
+  // STEP7 APPEND IMAGE TAGS AND INFO TO DOM
   resultsDiv.append(artDiv);
 }
 
@@ -161,3 +162,9 @@ function createArtInfo(data) {
 
 // STEP8 REMOVE PREVIOUS RESULTS
 
+// function removeArtResults() {
+//   const removeArtDivs = document.querySelector('.results-box');
+//   while (removeArtDivs.lastChild) {
+//     removeArtDivs.removeChild(removeArtDivs.lastChild)
+//   }
+// }
