@@ -26,8 +26,8 @@ const getMenuOptions = async () => {
     let filterMedItems = medArr.filter((val, index, val2) => {
       return val2.indexOf(val) === index 
     })
-    console.log(filterDeptItems)
-    console.log(filterMedItems)
+    // console.log(filterDeptItems)
+    // console.log(filterMedItems)
     setDeptOptions(filterDeptItems)
     setMediumOption(filterMedItems)
     // console.log(newArr)
@@ -67,13 +67,37 @@ function setMediumOption(item) {
 
 
 // STEP3 GET OPTION VALUES IN DROP DOWN MENU
+// A. DEPARTMENT
+// B. CATEGORIES
+
+function getDeptValue(e) {
+  e.preventDefault()
+  const optionValue = document.querySelector('#select-dept').value;
+  console.log(optionValue);
+}
+
+function getMedValue(e) {
+  e.preventDefault()
+  const optionValue = document.querySelector('#select-medium').value;
+  console.log(optionValue);
+}
+
 
 // STEP4 DROP DOWN MENU EVENTHANDLERS
+
+const deptButton = document.querySelector('#submit-dept');
+deptButton.addEventListener('click', getDeptValue);
+
+const medButton = document.querySelector('#submit-medium');
+medButton.addEventListener('click', getMedValue);
+
 
 // STEP5 GET VALUES FOR ARTWORK INFO
 
 
 // STEP6 API REQUEST FOR IMAGE TAGS
+// IMAGE URL: https://www.artic.edu/iiif/2/{identifier}/full/843,/0/default.jpg
+// note identitifier = image_id
 
 
 // STEP7 APPEND IMAGE TAGS AND INFO TO DOM
