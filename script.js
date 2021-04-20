@@ -4,10 +4,10 @@
 // note identitifier = image_id
 
 // STEP1 CREATE API REQUEST FOR DROPDOWN MENUS
+const url = 'https://api.artic.edu/api/v1/artworks?limit=50'
 const resultsDiv = document.querySelector('.results-box');
 
 const getMenuOptions = async () => {
-  const url = 'https://api.artic.edu/api/v1/artworks?limit=20'
   try {
     const response = await axios.get(url);
     let deptArr = [];
@@ -21,8 +21,7 @@ const getMenuOptions = async () => {
       let mediumList = response.data.data[i].classification_title
       medArr.push(mediumList);
 
-      createArtInfo(response.data.data[i])
-
+      // createArtInfo(response.data.data[i])
     }
 
     // filter out duplicated categories
@@ -36,9 +35,13 @@ const getMenuOptions = async () => {
 
     // console.log(filterDeptItems)
     // console.log(filterMedItems)
+
+    // STEP2
     setDeptOptions(filterDeptItems)
     setMediumOption(filterMedItems)
     // console.log(response.data.data[0]);
+
+    
   }
   catch (error) {
     console.error(error);
@@ -58,8 +61,6 @@ function setDeptOptions(item) {
   optionTag.value = item[i]
   selectTag.append(optionTag);
   }
-  
-
 }
 
 function setMediumOption(item) {
@@ -77,16 +78,39 @@ function setMediumOption(item) {
 // A. DEPARTMENT
 // B. CATEGORIES
 
-function getDeptValue(e) {
+async function getDeptValue(e) {
   e.preventDefault()
   const optionValue = document.querySelector('#select-dept').value;
   console.log(optionValue);
+  try {
+    const response = await axios.get(url);
+    for (let i = 0; i < response.data.data.length; i++){
+      if (response.data.data[i].department_title === optionValue) {
+        createArtInfo(response.data.data[i]);
+      } 
+    }
+  }
+  catch (error) {
+    console.error(error);
+  }
+
 }
 
-function getMedValue(e) {
+async function getMedValue(e) {
   e.preventDefault()
   const optionValue = document.querySelector('#select-medium').value;
   console.log(optionValue);
+  try {
+    const response = await axios.get(url);
+    for (let i = 0; i < response.data.data.length; i++){
+      if (response.data.data[i].classification_title === optionValue) {
+        createArtInfo(response.data.data[i]);
+      } 
+    }
+  }
+  catch (error) {
+    console.error(error);
+  }
 }
 
 
@@ -101,6 +125,7 @@ medButton.addEventListener('click', getMedValue);
 
 
 // STEP5 Create dynamic HTML with data and display ARTWORK INFO: title, artist, date,image,department,medium
+// STEP6 API REQUEST FOR IMAGE TAGS
 
 function createArtInfo(data) {
   // console.log(data)
@@ -108,35 +133,21 @@ function createArtInfo(data) {
   artDiv.classList.add('artwork-box');
 
   let artInfo = `
-    <h4 id="work-title">${data.title}</h4>
-    <img src='https://www.artic.edu/iiif/2/${data.image_id}/full/843,/0/default.jpg' alt='image of ${data.classification_title}' />
-    <h6 id="artist-with-date">${data.artist_title}, ${data.date_display}</h6>
+    <h3 id="work-title">${data.title}</h3>
+    <img class="art-image" src='https://www.artic.edu/iiif/2/${data.image_id}/full/843,/0/default.jpg' alt='image of ${data.classification_title}' />
+    <h4 id="artist-with-date">${data.artist_title}, ${data.date_display}</h4>
     <p class="art-dept">Department: ${data.department_title}</p>
     <p class="art-medium">Medium: ${data.classification_title}</p>
   `
   artDiv.insertAdjacentHTML('beforeend', artInfo);
 
-  // const workTitle = data.title;
-  // const artistTitle = data.artist_title;
-  // const dateDisplay = data.date_display;
-  // const departmentTitle = data.department_title;
-  // const mediumTitle = data.classification_title;
   console.log(artDiv);
-  // console.log(imageSrc);
-  // // console.log(workTitle);
-  // // console.log(artistTitle);
-  // // console.log(dateDisplay);
-  // // console.log(departmentTitle);
-  // // console.log(mediumTitle);
-  // // resultsDiv.append(artDiv);  
+  resultsDiv.append(artDiv);
 }
-
-
 
 // STEP6 API REQUEST FOR IMAGE TAGS
 // IMAGE URL: https://www.artic.edu/iiif/2/{identifier}/full/843,/0/default.jpg
 // note identitifier = image_id
-
 // const imageSrc = response.data.data[].image_id
 // const IMAGE_URL = `https://www.artic.edu/iiif/2/${imageSrc}/full/843,/0/default.jpg`
 

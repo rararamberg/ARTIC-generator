@@ -42,16 +42,6 @@ header {
 }
 
 /* MAIN */
-.results-box {
-  width: 60%;
-  height: 450px;
-  background-color: lightsalmon;
-  display: block;
-  position: relative;
-  left: 375px;
-  bottom: 300px;
-}
-
 form {
   background-color: paleturquoise;
   width: fit-content;
@@ -59,6 +49,41 @@ form {
   height: 300px
   /* display: block;
   margin-top: 20px; */
+}
+
+h3 {
+  font-style: italic;
+}
+
+.artwork-box {
+  background-color: lightyellow;
+  width: fit-content;
+  height: auto;
+  padding: 15px 30px 15px 15px;
+  margin: 10px;
+}
+
+.art-image {
+  height: 250px;
+  width: auto;
+
+}
+
+
+.results-box {
+  width: 65%;
+  height: 800px;
+  background-color: lightsalmon;
+  padding: 25px;
+  margin-right: 35px;
+  position: relative;
+  left: 375px;
+  bottom: 300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: scroll;
 }
 
 
