@@ -3,7 +3,7 @@
 // note identitifier = image_id
 
 // STEP1 CREATE API REQUEST FOR DROPDOWN MENUS
-const url = 'https://api.artic.edu/api/v1/artworks?limit=50'
+const url = 'https://api.artic.edu/api/v1/artworks?limit=100'
 const resultsDiv = document.querySelector('.results-box');
 
 const getMenuOptions = async () => {
@@ -25,7 +25,6 @@ const getMenuOptions = async () => {
     let filterDeptItems = deptArr.filter((val, index, val2) => {
       return val2.indexOf(val) === index 
     })
-
     let filterMedItems = medArr.filter((val, index, val2) => {
       return val2.indexOf(val) === index 
     })
@@ -71,9 +70,8 @@ function setMediumOption(item) {
 
 // STEP3 GET OPTION VALUES IN DROP DOWN MENU
 // 3A. DEPARTMENT
-async function getDeptValue(e) {
+async function getDeptValue() {
   removeArtResults()
-  e.preventDefault()
   const optionValue = document.querySelector('#select-dept').value;
   console.log(optionValue);
   try {
@@ -87,12 +85,10 @@ async function getDeptValue(e) {
   catch (error) {
     console.error(error);
   }
-
 }
 // 3B. MEDIUMS
-async function getMedValue(e) {
+async function getMedValue() {
   removeArtResults()
-  e.preventDefault()
   const optionValue = document.querySelector('#select-medium').value;
   console.log(optionValue);
   try {
@@ -113,10 +109,21 @@ async function getMedValue(e) {
 // this may need to change to getMenuOptions
 
 const deptButton = document.querySelector('#submit-dept');
-deptButton.addEventListener('click', getDeptValue);
+deptButton.addEventListener('click', (e) => {
+  e.preventDefault()
+  getDeptValue()
+  // resets previous values if changing drop downs
+  document.querySelector('#select-medium').value = document.querySelector('#med-default').value;
+});
 
 const medButton = document.querySelector('#submit-medium');
-medButton.addEventListener('click', getMedValue);
+medButton.addEventListener('click', (e) => {
+  e.preventDefault()
+  getMedValue()
+  // resets previous values if changing drop downs
+  document.querySelector('#select-dept').value = document.querySelector('#dept-default').value;
+});
+
 
 
 // STEP5 Create dynamic HTML with data and display ARTWORK INFO: title, artist, date,image,department,medium
