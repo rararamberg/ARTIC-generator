@@ -1,4 +1,3 @@
-// console.log('Hello World');
 // URL: https://api.artic.edu/api/v1/artworks?limit=100
 // IMAGE URL: https://www.artic.edu/iiif/2/{identifier}/full/843,/0/default.jpg
 // note identitifier = image_id
@@ -20,8 +19,6 @@ const getMenuOptions = async () => {
       
       let mediumList = response.data.data[i].classification_title
       medArr.push(mediumList);
-
-      // createArtInfo(response.data.data[i])
     }
 
     // filter out duplicated categories
@@ -39,9 +36,7 @@ const getMenuOptions = async () => {
     // STEP2
     setDeptOptions(filterDeptItems)
     setMediumOption(filterMedItems)
-    // console.log(response.data.data[0]);
-
-    
+    // console.log(response.data.data[0]); 
   }
   catch (error) {
     console.error(error);
@@ -50,9 +45,9 @@ const getMenuOptions = async () => {
 
 getMenuOptions()
 
+
 // STEP2 APPEND DATA TO OPTION TAGS IN DROPDOWN MENUS
 // A. DEPARTMENT
-// B. CATEGORIES
 function setDeptOptions(item) {
   for (let i = 0; i < item.length; i++) {
   const selectTag = document.querySelector('#select-dept');
@@ -62,7 +57,7 @@ function setDeptOptions(item) {
   selectTag.append(optionTag);
   }
 }
-
+// B. MEDIUMS
 function setMediumOption(item) {
   for (let i = 0; i < item.length; i++) {
     const selectTag = document.querySelector('#select-medium');
@@ -75,10 +70,9 @@ function setMediumOption(item) {
 
 
 // STEP3 GET OPTION VALUES IN DROP DOWN MENU
-// A. DEPARTMENT
-// B. CATEGORIES
-
+// 3A. DEPARTMENT
 async function getDeptValue(e) {
+  removeArtResults()
   e.preventDefault()
   const optionValue = document.querySelector('#select-dept').value;
   console.log(optionValue);
@@ -95,8 +89,9 @@ async function getDeptValue(e) {
   }
 
 }
-
+// 3B. MEDIUMS
 async function getMedValue(e) {
+  removeArtResults()
   e.preventDefault()
   const optionValue = document.querySelector('#select-medium').value;
   console.log(optionValue);
@@ -131,7 +126,6 @@ function createArtInfo(data) {
   // console.log(data)
   const artDiv = document.createElement('div');
   artDiv.classList.add('artwork-box');
-
   let artInfo = `
     <h3 id="work-title">${data.title}</h3>
     <img class="art-image" src='https://www.artic.edu/iiif/2/${data.image_id}/full/843,/0/default.jpg' alt='image of ${data.classification_title}' />
@@ -162,9 +156,9 @@ function createArtInfo(data) {
 
 // STEP8 REMOVE PREVIOUS RESULTS
 
-// function removeArtResults() {
-//   const removeArtDivs = document.querySelector('.results-box');
-//   while (removeArtDivs.lastChild) {
-//     removeArtDivs.removeChild(removeArtDivs.lastChild)
-//   }
-// }
+function removeArtResults() {
+  const removeArtDivs = document.querySelector('.results-box');
+  while (removeArtDivs.lastChild) {
+    removeArtDivs.removeChild(removeArtDivs.lastChild)
+  }
+}
