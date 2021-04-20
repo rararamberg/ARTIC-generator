@@ -256,12 +256,12 @@ This schedule will be used to keep track of my progress throughout the week and 
 |April 19| Pseudocode JS Steps | Complete
 |April 19| API request for Dropdowns | Complete
 |April 19| Append Data to Option Tags in Drop Down Menu | Complete
-|April 20| Get Option Values in Drop Down Menu | Incomplete
-|April 20| Drop Down Menu Event Handlers| Incomplete
-|April 20|  Get values for Result artwork info | Incomplete
-|April 20|  API Image request for Artwork image tags | Incomplete
-|April 21|  Append Results to DOM | Incomplete
-|April 21|  Remove Previous Results | Incomplete
+|April 20| Get Option Values in Drop Down Menu | Complete
+|April 20| Drop Down Menu Event Handlers| Complete
+|April 20|  Get values for Result artwork info | Complete
+|April 20|  API Image request for Artwork image tags | Complete
+|April 21|  Append Results to DOM | Complete
+|April 21|  Remove Previous Results | Complete
 |April 21|  CSS Flex and Media Queries | Incomplete
 |April 21| Testing MVP Requirements  | Incomplete
 |April 22| Post-MVP and Advanced CSS | Incomplete

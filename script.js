@@ -41,7 +41,6 @@ const getMenuOptions = async () => {
     console.error(error);
   }
 }
-
 getMenuOptions()
 
 
@@ -147,22 +146,8 @@ function createArtInfo(data) {
   resultsDiv.append(artDiv);
 }
 
-// STEP6 API REQUEST FOR IMAGE TAGS
-// IMAGE URL: https://www.artic.edu/iiif/2/{identifier}/full/843,/0/default.jpg
-// note identitifier = image_id
-// const imageSrc = response.data.data[].image_id
-// const IMAGE_URL = `https://www.artic.edu/iiif/2/${imageSrc}/full/843,/0/default.jpg`
-
-
-// STEP7 APPEND IMAGE TAGS AND INFO TO DOM
-// const resultsDiv = document.querySelector('.results-box');
-// const artDiv = document.createElement('div');
-// artDiv.classList.add('artwork-box');
-// resultsDiv.append(artDiv);
-
 
 // STEP8 REMOVE PREVIOUS RESULTS
-
 function removeArtResults() {
   const removeArtDivs = document.querySelector('.results-box');
   while (removeArtDivs.lastChild) {
