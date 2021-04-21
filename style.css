@@ -6,7 +6,7 @@
 /* HEADER */
 
 header {
-  max-height: 400px;
+  max-height: 450px;
 }
 .artic-icon {
   width: 225px;
@@ -14,7 +14,7 @@ header {
   background-image: url("https://chicagoculturalalliance.org/wp-content/uploads/2018/04/Art-Institute.png");
   background-size: contain;
   position: relative;
-  top: 80px;
+  top: 90px;
   left: 5px;
   margin: 10px;
 }
@@ -24,18 +24,18 @@ header {
   background-size: cover;
   background-position: center;
   padding: 150px 10px 10px 10px;
-  width: 75%;
-  height: 350px;
+  width: 85%;
+  height: 400px;
   position: relative;
   top: -195px;
   right: -275px;
-  margin: 10px;
+  margin: 0px 10px 30px 5px;
 }
 
 .title {
   background-color: palegreen;
   width: 550px;
-  padding-left: 20px;
+  padding: 5px 10px 5px 20px;
   margin-left: 10px;
 }
 
