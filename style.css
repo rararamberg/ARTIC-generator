@@ -9,19 +9,18 @@ header {
   max-height: 400px;
 }
 .artic-icon {
-  width: 200px;
-  height: 200px;
-  background-image: url('https://chicagoculturalalliance.org/wp-content/uploads/2018/04/Art-Institute.png');
+  width: 225px;
+  height: 225px;
+  background-image: url("https://chicagoculturalalliance.org/wp-content/uploads/2018/04/Art-Institute.png");
   background-size: contain;
   position: relative;
   top: 80px;
   left: 5px;
   margin: 10px;
-  
 }
 
 .page-heading {
-  background-image: url('https://cdn.theculturetrip.com/wp-content/uploads/2019/05/feature_j87t9a.jpg');
+  background-image: url("https://cdn.theculturetrip.com/wp-content/uploads/2019/05/feature_j87t9a.jpg");
   background-size: cover;
   background-position: center;
   padding: 150px 10px 10px 10px;
@@ -31,7 +30,6 @@ header {
   top: -195px;
   right: -275px;
   margin: 10px;
-  
 }
 
 .title {
@@ -42,17 +40,27 @@ header {
 }
 
 /* MAIN */
+button {
+  border-radius: 10px;
+  padding: 5px;
+}
 form {
   background-color: paleturquoise;
   width: fit-content;
-  padding: 60px 20px 20px 20px;
-  height: 300px
-  /* display: block;
-  margin-top: 20px; */
+  padding: 10px;
+  height: 300px;
+  margin: 25px 5px 5px 8px;
 }
 
-h3 {
+select {
+  width: 175px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.artwork-box h3 {
   font-style: italic;
+  max-width: 300px;
 }
 
 .artwork-box {
@@ -61,31 +69,31 @@ h3 {
   height: auto;
   padding: 15px 30px 15px 15px;
   margin: 10px;
+  border-radius: 10px;
 }
 
 .art-image {
-  height: 250px;
-  width: auto;
-
+  height: auto;
+  width: 300px;
 }
 
-
 .results-box {
-  width: 65%;
-  height: 800px;
+  width: 70%;
+  height: 700px;
   background-color: lightsalmon;
   padding: 25px;
   margin-right: 35px;
   position: relative;
-  left: 375px;
+  left: 325px;
   bottom: 300px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: space-between;
   overflow: scroll;
 }
-
 
 /* FOOTER */
 footer {
@@ -93,7 +101,7 @@ footer {
   background-color: palevioletred;
   padding: 10px;
   height: 100px;
-  width: 100%;
+  min-width: 100%;
   position: relative;
   bottom: 0px;
 }
