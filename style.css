@@ -49,7 +49,7 @@ form {
   width: fit-content;
   padding: 10px;
   height: 300px;
-  margin: 25px 5px 5px 8px;
+  margin: 0 10px 20px 0;
 }
 
 select {
@@ -58,10 +58,6 @@ select {
   padding: 5px;
 }
 
-.artwork-box h3 {
-  font-style: italic;
-  max-width: 300px;
-}
 
 .artwork-box {
   background-color: lightyellow;
@@ -72,25 +68,40 @@ select {
   border-radius: 10px;
 }
 
+.artwork-box h3 {
+  font-style: italic;
+  max-width: 300px;
+}
+
 .art-image {
   height: auto;
   width: 300px;
 }
 
-.results-box {
-  width: 70%;
-  height: 700px;
-  background-color: lightsalmon;
-  padding: 25px;
-  margin-right: 35px;
-  position: relative;
-  left: 325px;
-  bottom: 300px;
+.container {
+  margin: 25px 45px 5px 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
+  align-content: space-between;
+}
+
+.results-box {
+  width: 75%;
+  height: 700px;
+  background-color: lightsalmon;
+  padding: 25px;
+  /* position: relative;
+  left: 0%;
+  bottom: 200px;
+  margin: 0  0  0 auto; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
   align-content: space-between;
   overflow: scroll;
 }
@@ -102,8 +113,8 @@ footer {
   padding: 10px;
   height: 100px;
   min-width: 100%;
-  position: relative;
-  bottom: 0px;
+  /* position: relative;
+  bottom: 0%; */
 }
 
 footer p {
@@ -114,6 +125,10 @@ footer p {
 li {
   display: inline;
   padding: 5px;
+}
+
+ul {
+  padding-left: 0px;
 }
 
 .icon img {
@@ -127,6 +142,3 @@ li {
   /* background-color: #009088; */
 }
 
-ul {
-  padding-left: 0px;
-}
