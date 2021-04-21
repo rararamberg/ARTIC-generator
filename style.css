@@ -3,40 +3,61 @@
   box-sizing: border-box;
 }
 
-/* HEADER */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; */
+}
 
+/* HEADER */
 header {
-  max-height: 450px;
+  height: auto;
+  background-color: lightseagreen;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-around;
 }
 .artic-icon {
   width: 225px;
   height: 225px;
   background-image: url("https://chicagoculturalalliance.org/wp-content/uploads/2018/04/Art-Institute.png");
   background-size: contain;
-  position: relative;
+  /* position: relative;
   top: 90px;
-  left: 5px;
-  margin: 10px;
+  left: 5px; */
+  margin: 10px 60px 10px 10px;
 }
 
 .page-heading {
   background-image: url("https://cdn.theculturetrip.com/wp-content/uploads/2019/05/feature_j87t9a.jpg");
   background-size: cover;
   background-position: center;
-  padding: 150px 10px 10px 10px;
-  width: 85%;
-  height: 400px;
-  position: relative;
+  padding: 200px 10px 10px 10px;
+  width: 79%;
+  min-height: 400px;
+  /* position: relative;
   top: -195px;
-  right: -275px;
-  margin: 0px 10px 30px 5px;
+  right: -275px; */
+  margin: 10px 0px 30px 10px;
 }
 
 .title {
   background-color: palegreen;
-  width: 550px;
-  padding: 5px 10px 5px 20px;
+  padding: 5px 40px 5px 20px;
   margin-left: 10px;
+  width: fit-content;
+}
+
+.title h1 {
+  background-color: darkseagreen;
+
 }
 
 /* MAIN */
@@ -50,6 +71,11 @@ form {
   padding: 10px;
   height: 300px;
   margin: 0 10px 20px 0;
+}
+
+
+main {
+  background-color: lightslategray;
 }
 
 select {
@@ -111,8 +137,8 @@ footer {
   text-align: center;
   background-color: palevioletred;
   padding: 10px;
-  height: 100px;
-  min-width: 100%;
+  /* height: 100px; */
+  /* min-width: 100%; */
   /* position: relative;
   bottom: 0%; */
 }
@@ -142,3 +168,42 @@ ul {
   /* background-color: #009088; */
 }
 
+
+
+
+/* MEDIA QUERIES */
+/* @media screen and (max-width: 768px) {
+  
+  body {
+    width: 100%;
+  }
+  header {
+    max-height: 500px;
+  }
+
+  form {
+    background-color: paleturquoise;
+    width: 100%;
+    height: fit-content;
+    margin: 0 10px 20px 0;
+  }
+  .results-box {
+  width: 100%;
+  }
+
+  footer {
+    text-align: center;
+    background-color: rgb(216, 206, 112);
+    padding-top: 20px;
+  }
+
+  footer p {
+    font-size: 16px;  
+  }
+
+  .icon img {
+    height: 45px;
+    width: auto;
+  }
+
+} */
