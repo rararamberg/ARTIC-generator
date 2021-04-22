@@ -8,6 +8,7 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
+  background-color: #AB9992;
   /* font-size: 100%;
   font: inherit;
   vertical-align: baseline; */
@@ -16,8 +17,8 @@ body {
 /* HEADER */
 header {
   height: auto;
-  background-color: lightseagreen;
-  padding: 10px;
+  background-color: black;
+  padding: 15px 10px 10px 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -41,45 +42,53 @@ header {
   background-size: cover;
   background-position: center;
   padding: 200px 10px 10px 10px;
-  width: 85%;
+  width: 84%;
   min-height: 400px;
   /* position: relative;
   top: -195px;
   right: -275px; */
-  margin: 0px 0px 30px 10px;
+  margin: 0px 0px 10px 0px;
 }
 
 .title {
-  background-color: palegreen;
+  background-color: black;
   padding: 5px 40px 5px 20px;
   margin-left: 10px;
   width: fit-content;
 }
 
 .title h1 {
-  background-color: darkseagreen;
   font-family: 'Zen Dots', cursive;
+  color: #ffffff;
 }
 
 /* MAIN */
 button {
+  background: black;
+  color: #ffffff;
+  width: 75px;
+  height: 35px;
   border-radius: 10px;
   padding: 5px;
+  transition: all 200ms ease; 
+}
+
+button:hover {
+  background: #B50938;
+  font-family: 'Zen Dots', cursive;
 }
 form {
-  background-color: paleturquoise;
+  background-color: #AB9992;;
   width: fit-content;
   padding: 10px;
   height: 300px;
   margin: 0 10px 20px 0;
 }
 
-main {
-  background-color: lightslategray;
-}
 
 select {
   width: 175px;
+  height: 35px;
   border-radius: 10px;
   padding: 5px;
 }
@@ -91,7 +100,7 @@ form p {
 
 .artwork-box {
   font-family: 'Montserrat', sans-serif;
-  background-color: lightyellow;
+  background-color: #ffffff;
   width: fit-content;
   height: auto;
   padding: 15px 30px 15px 15px;
@@ -116,7 +125,7 @@ form p {
 }
 
 .main-container {
-  margin: 25px 45px 5px 10px;
+  margin: 25px 45px 25px 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -128,7 +137,7 @@ form p {
 .results-box {
   width: 75%;
   height: 700px;
-  background-color: lightsalmon;
+  background-color: #797573;
   padding: 25px;
   /* position: relative;
   left: 0%;
@@ -146,7 +155,7 @@ form p {
 /* FOOTER */
 footer {
   text-align: center;
-  background-color: palevioletred;
+  background-color: #B50938;
   padding: 35px 10px 10px 10px;
   margin: 0;
   /* height: 100px; */
@@ -176,25 +185,27 @@ li p {
 .icon a, img {
   height: 45px;
   width: auto;
-  /* background-color: white; */
 }
 
 .icon img:hover {
   cursor: pointer;
-  /* background-color: #009088; */
+  background-color: #ffffff;
 }
 
-/* MEDIA QUERIES */
 
-@media screen and (max-width: 1986px) {
+
+/* ==========   MEDIA QUERIES   ==============*/
+
+@media screen and (max-width: 1586px) {
   .page-heading {
-    width: 98%;
+    width: 100%;
     margin-left: 0px;
   }
 }
 
-
 @media screen and (max-width: 1515px) {
+
+
   .results-box {
     width: 100%;
     margin-bottom: 10px;
@@ -206,7 +217,6 @@ li p {
   }
 
   form {
-    background-color: paleturquoise;
     width: 100%;
     height: fit-content;
     margin: 5px auto 15px auto;
@@ -242,6 +252,7 @@ li p {
   }
 
   .title h1 {
+    background-color: black;
     padding: 10px 20px 10px 5px;
   }
 
