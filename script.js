@@ -3,7 +3,7 @@
 // note identitifier = image_id
 
 // STEP1 CREATE API REQUEST FOR DROPDOWN MENUS
-const url = 'https://api.artic.edu/api/v1/artworks?limit=100'
+const url = 'https://api.artic.edu/api/v1/artworks?page=2&limit=100'
 const resultsDiv = document.querySelector('.results-box');
 
 const getMenuOptions = async () => {
@@ -137,14 +137,61 @@ function createArtInfo(data) {
   // console.log(data)
   const artDiv = document.createElement('div');
   artDiv.classList.add('artwork-box');
-  let artInfo = `
-    <h3 id="work-title">${data.title}</h3>
-    <img class="art-image" src='https://www.artic.edu/iiif/2/${data.image_id}/full/843,/0/default.jpg' alt='image of ${data.classification_title}' />
-    <h4 id="artist-with-date">${data.artist_title}, ${data.date_display}</h4>
-    <p class="art-dept">Department:  ${data.department_title}</p>
-    <p class="art-medium">Medium:  ${data.classification_title}</p>
-  `
-  artDiv.insertAdjacentHTML('beforeend', artInfo);
+
+  const artTitle = document.createElement('h3');
+  artTitle.classList.add('work-title');
+  artTitle.textContent = data.title
+  artDiv.append(artTitle);
+
+  const artImage = document.createElement('img');
+  artImage.classList.add('art-image');
+  artImage.src = `https://www.artic.edu/iiif/2/${data.image_id}/full/843,/0/default.jpg`;
+  artImage.alt = `image of ${data.classification_title}`;
+  artDiv.append(artImage);
+
+  const artistDateTitle = document.createElement('h4');
+  artistDateTitle.classList.add('artist-with-date');
+  if (data.artist_title === null) {
+    artistDateTitle.textContent = `Unknown,   ${data.date_display}`;
+    artDiv.append(artistDateTitle);
+  } else {
+    artistDateTitle.textContent = `${data.artist_title}, ${data.date_display}`;
+    artDiv.append(artistDateTitle);
+  }
+
+  const deptPTag = document.createElement('p');
+  deptPTag.classList.add('art-dept');
+  if (data.department_title !== null) {
+    deptPTag.textContent = `Department:   ${data.department_title}`;
+    artDiv.append(deptPTag)
+  }
+
+
+  const medPTag = document.createElement('p');
+  medPTag.classList.add('art-medium');
+  if (data.classification_title !== null) {
+    medPTag.textContent = `Medium:    ${data.classification_title}`;
+    artDiv.append(medPTag)
+  }
+
+
+  const originPTag = document.createElement('p');
+  originPTag.classList.add('art-origin');
+  if (data.place_of_origin !== null) {
+    originPTag.textContent = `Origin:   ${data.place_of_origin}`
+    artDiv.append(originPTag)
+  }
+
+  // let artInfo = `
+  //   <h3 id="work-title">${data.title}</h3>
+  //   <img class="art-image" src='https://www.artic.edu/iiif/2/${data.image_id}/full/843,/0/default.jpg' alt='image of ${data.classification_title}' />
+  //   <h4 id="artist-with-date">${data.artist_title}, ${data.date_display}</h4>
+  //   <p class="art-dept">Department:  ${data.department_title}</p>
+  //   <p class="art-medium">Medium:  ${data.classification_title}</p>
+  //   <br>
+  //   <p class="art-origin">Origin: ${data.place_of_origin}</p>
+  // `
+  // artDiv.insertAdjacentHTML('beforeend', artInfo);
 
   console.log(artDiv);
   // STEP7 APPEND IMAGE TAGS AND INFO TO DOM
@@ -159,3 +206,9 @@ function removeArtResults() {
     removeArtDivs.removeChild(removeArtDivs.lastChild)
   }
 }
+
+
+
+
+
+
