@@ -15,10 +15,15 @@ const getMenuOptions = async () => {
       // console.log(response.data.data[i].department_title);
       // console.log(response.data.data[i].classification_title);
       let deptItem = response.data.data[i].department_title;
-      deptArr.push(deptItem);
+      if (deptItem) {
+        deptArr.push(deptItem);
+      }
       
+    
       let mediumList = response.data.data[i].classification_title
-      medArr.push(mediumList);
+      if (mediumList) {
+        medArr.push(mediumList);
+      }
     }
 
     // filter out duplicated categories
@@ -136,8 +141,8 @@ function createArtInfo(data) {
     <h3 id="work-title">${data.title}</h3>
     <img class="art-image" src='https://www.artic.edu/iiif/2/${data.image_id}/full/843,/0/default.jpg' alt='image of ${data.classification_title}' />
     <h4 id="artist-with-date">${data.artist_title}, ${data.date_display}</h4>
-    <p class="art-dept">Department: ${data.department_title}</p>
-    <p class="art-medium">Medium: ${data.classification_title}</p>
+    <p class="art-dept">Department:  ${data.department_title}</p>
+    <p class="art-medium">Medium:  ${data.classification_title}</p>
   `
   artDiv.insertAdjacentHTML('beforeend', artInfo);
 

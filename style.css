@@ -3,7 +3,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   border: 0;
@@ -16,7 +17,7 @@ html, body {
 header {
   height: auto;
   background-color: lightseagreen;
-  padding: 0px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -32,7 +33,7 @@ header {
   /* position: relative;
   top: 90px;
   left: 5px; */
-  margin: 10px 60px 10px 10px;
+  margin: 0px 60px 10px 0px;
 }
 
 .page-heading {
@@ -40,12 +41,12 @@ header {
   background-size: cover;
   background-position: center;
   padding: 200px 10px 10px 10px;
-  width: 79%;
+  width: 85%;
   min-height: 400px;
   /* position: relative;
   top: -195px;
   right: -275px; */
-  margin: 10px 0px 30px 10px;
+  margin: 0px 0px 30px 10px;
 }
 
 .title {
@@ -57,7 +58,7 @@ header {
 
 .title h1 {
   background-color: darkseagreen;
-
+  font-family: 'Zen Dots', cursive;
 }
 
 /* MAIN */
@@ -73,7 +74,6 @@ form {
   margin: 0 10px 20px 0;
 }
 
-
 main {
   background-color: lightslategray;
 }
@@ -84,8 +84,13 @@ select {
   padding: 5px;
 }
 
+form p {
+  font-family: 'Zen Dots', cursive;
+  letter-spacing: 1px;
+}
 
 .artwork-box {
+  font-family: 'Montserrat', sans-serif;
   background-color: lightyellow;
   width: fit-content;
   height: auto;
@@ -96,7 +101,13 @@ select {
 
 .artwork-box h3 {
   font-style: italic;
+  /* font-weight: bolder; */
   max-width: 300px;
+}
+
+.artwork-box p {
+  font-size: 14px;
+  line-height: 1.5px;
 }
 
 .art-image {
@@ -104,7 +115,7 @@ select {
   width: 300px;
 }
 
-.container {
+.main-container {
   margin: 25px 45px 5px 10px;
   display: flex;
   flex-direction: row;
@@ -136,29 +147,34 @@ select {
 footer {
   text-align: center;
   background-color: palevioletred;
-  padding: 10px;
+  padding: 35px 10px 10px 10px;
+  margin: 0;
   /* height: 100px; */
   /* min-width: 100%; */
   /* position: relative;
   bottom: 0%; */
 }
 
-footer p {
-  font-size: 12px;
-  padding-bottom: 20px;
-  margin-bottom: 10px;
-}
 li {
   display: inline;
+  height: 45px;
   padding: 5px;
+  margin: 0px 10px;
 }
 
-ul {
+li p {
+  font-family: 'Zen Dots', cursive;
+  font-size: 12px;
+  margin: 12px auto 0 auto;
+}
+
+#footer-bar {
   padding-left: 0px;
+  margin: 0px;
 }
 
-.icon img {
-  height: 25px;
+.icon a, img {
+  height: 45px;
   width: auto;
   /* background-color: white; */
 }
@@ -168,42 +184,108 @@ ul {
   /* background-color: #009088; */
 }
 
-
-
-
 /* MEDIA QUERIES */
-/* @media screen and (max-width: 768px) {
-  
-  body {
-    width: 100%;
+
+@media screen and (max-width: 1986px) {
+  .page-heading {
+    width: 98%;
+    margin-left: 0px;
   }
-  header {
-    max-height: 500px;
+}
+
+
+@media screen and (max-width: 1515px) {
+  .results-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 2px;
+    width: 85px;
   }
 
   form {
     background-color: paleturquoise;
     width: 100%;
     height: fit-content;
-    margin: 0 10px 20px 0;
-  }
-  .results-box {
-  width: 100%;
+    margin: 5px auto 15px auto;
   }
 
-  footer {
+  .form-instruct {
     text-align: center;
-    background-color: rgb(216, 206, 112);
-    padding-top: 20px;
   }
 
-  footer p {
-    font-size: 16px;  
+  .main-container {
+    margin: 15px 5px;
   }
 
-  .icon img {
-    height: 45px;
+  .menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    align-items: center;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .page-heading {
+    min-height: 250px;
+    padding: 150px 10px 10px 10px;
+  }
+
+  .title {
+    background-color: inherit;
+  }
+
+  .title h1 {
+    padding: 10px 20px 10px 5px;
+  }
+
+ 
+  li p {
+    font-size: 16px;
+  }
+
+
+}
+
+@media screen and (max-width: 625px) {
+  .artic-icon {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+
+  .title h1 {
+    padding: 10px 5px;
+  }
+
+  button {
+    margin-top: 10px;
+  }
+
+  select {
+    width: 205px;
+  }
+
+ 
+
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    align-items: center;
+  }
+
+  .icon a, img {
+    height: 35px;
     width: auto;
-  }
-
-} */
+    /* background-color: white; */
+}
+}
