@@ -1,4 +1,4 @@
-//API URL: https://api.artic.edu/api/v1/artworks?limit=100
+//API URL: https://api.artic.edu/api/v1/artworks?page=3&limit=100
 //API IMAGE URL: https://www.artic.edu/iiif/2/{identifier}/full/843,/0/default.jpg
 
 

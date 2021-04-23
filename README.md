@@ -11,7 +11,7 @@ This application uses the Art Institute of Chicago API to allow users to pull up
 
 ARTIC has two separate APIs, one for archive of artwork data and another specifically for artworks images.
 
-[Artwork URL] (https://api.artic.edu/api/v1/artworks?limit=100)
+[Artwork URL] (https://api.artic.edu/api/v1/artworks?page=3&limit=100)
 
 
 [Image URL] (https://www.artic.edu/iiif/2/{identifier}/full/843,/0/default.jpg)
