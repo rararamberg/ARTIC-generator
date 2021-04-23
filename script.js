@@ -3,7 +3,7 @@
 
 
 // ======= STEP1 CREATE API REQUEST FOR DROPDOWN MENUS ===================
-const url = 'https://api.artic.edu/api/v1/artworks?page=4&limit=100'
+const url = 'https://api.artic.edu/api/v1/artworks?page=2&limit=100'
 const resultsDiv = document.querySelector('.results-box');
 
 const getMenuOptions = async () => {
