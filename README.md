@@ -262,9 +262,9 @@ This schedule will be used to keep track of my progress throughout the week and 
 |April 20|  API Image request for Artwork image tags | Complete
 |April 21|  Append Results to DOM | Complete
 |April 21|  Remove Previous Results | Complete
-|April 21|  CSS Flex and Media Queries | Incomplete
-|April 21| Testing MVP Requirements  | Incomplete
-|April 22| Post-MVP and Advanced CSS | Incomplete
+|April 21|  CSS Flex and Media Queries | Complete
+|April 21| Testing MVP Requirements  | Complete
+|April 22| Post-MVP and Advanced CSS | Semi-Complete
 |April 23| Presentations | Incomplete
 
 ## Priority Matrix
@@ -286,8 +286,8 @@ This schedule will be used to keep track of my progress throughout the week and 
 |JS:  Append Results to DOM                    | H        |4.0hrs           | 2hrs        | Xhrs      |
 |JS: Remove Previous Results                   | H        |2.0hrs           | 1hrs        | Xhrs      |
 |CSS: Flex and Media Queries                   | H        |4.5hrs           | 7.5hrs        | Xhrs      |
-|Testing MVP Requirements                      | H/M      |1.5hrs           | Xhrs        | Xhrs      |
-| Post-MVP and Advanced CSS                    | L        |6.5hrs           | Xhrs        | Xhrs      |
+|Testing MVP Requirements                      | H/M      |1.5hrs           | 1hrs        | Xhrs      |
+| Post-MVP and Advanced CSS                    | L        |6.5hrs           | 6hrs        | Xhrs      |
 | Total | H | 40.5hrs| 22.5hrs | Xhrs |
 
 ## Code Snippet
