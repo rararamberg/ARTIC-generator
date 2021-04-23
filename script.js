@@ -1,6 +1,6 @@
-// URL: https://api.artic.edu/api/v1/artworks?limit=100
-// IMAGE URL: https://www.artic.edu/iiif/2/{identifier}/full/843,/0/default.jpg
-// note identitifier = image_id
+//API URL: https://api.artic.edu/api/v1/artworks?limit=100
+//API IMAGE URL: https://www.artic.edu/iiif/2/{identifier}/full/843,/0/default.jpg
+
 
 // ======= STEP1 CREATE API REQUEST FOR DROPDOWN MENUS ===================
 const url = 'https://api.artic.edu/api/v1/artworks?page=3&limit=100'
@@ -12,8 +12,7 @@ const getMenuOptions = async () => {
     let deptArr = [];
     let medArr = [];
     for (let i = 0; i < response.data.data.length; i++){
-      // console.log(response.data.data[i].department_title);
-      // console.log(response.data.data[i].classification_title);
+
       let deptItem = response.data.data[i].department_title;
       if (deptItem) {
         deptArr.push(deptItem);
@@ -34,10 +33,10 @@ const getMenuOptions = async () => {
       return val2.indexOf(val) === index 
     })
 
-    // STEP2
+    // === STEP2 called here ===
     setDeptOptions(filterDeptItems)
     setMediumOption(filterMedItems)
-    // console.log(response.data.data[0]); 
+  
   }
   catch (error) {
     console.error(error);
@@ -47,7 +46,7 @@ getMenuOptions()
 
 
 // === STEP2 APPEND DATA TO OPTION TAGS IN DROPDOWN MENUS ======
-// A. == DEPARTMENT ==
+// 2A. == DEPARTMENT ==
 function setDeptOptions(item) {
   for (let i = 0; i < item.length; i++) {
   const selectTag = document.querySelector('#select-dept');
@@ -56,8 +55,9 @@ function setDeptOptions(item) {
   optionTag.value = item[i]
   selectTag.append(optionTag);
   }
+  return item
 }
-// B. == MEDIUMS ==
+// 2B. == MEDIUMS ==
 function setMediumOption(item) {
   for (let i = 0; i < item.length; i++) {
     const selectTag = document.querySelector('#select-medium');
@@ -65,16 +65,17 @@ function setMediumOption(item) {
     optionTag.textContent = item[i]
     optionTag.value = item[i]
     selectTag.append(optionTag);
-    }
+  }
+  return item
 }
 
 
 // ====  STEP3 GET OPTION VALUES IN DROP DOWN MENU ================
 // 3A. == DEPARTMENT ==
 async function getDeptValue() {
+  // === STEP8 function called here ===
   removeArtResults()
   const optionValue = document.querySelector('#select-dept').value;
-  // console.log(optionValue);
   try {
     const response = await axios.get(url);
     for (let i = 0; i < response.data.data.length; i++){
@@ -82,6 +83,7 @@ async function getDeptValue() {
         createArtInfo(response.data.data[i]);
       } 
     }
+    return optionValue
   }
   catch (error) {
     console.error(error);
@@ -89,9 +91,9 @@ async function getDeptValue() {
 }
 // 3B. == MEDIUMS ==
 async function getMedValue() {
+  //  === STEP8 function called here ===
   removeArtResults()
   const optionValue = document.querySelector('#select-medium').value;
-  // console.log(optionValue);
   try {
     const response = await axios.get(url);
     for (let i = 0; i < response.data.data.length; i++){
@@ -99,6 +101,7 @@ async function getMedValue() {
         createArtInfo(response.data.data[i]);
       } 
     }
+    return optionValue
   }
   catch (error) {
     console.error(error);
@@ -112,7 +115,7 @@ const deptButton = document.querySelector('#submit-dept');
 deptButton.addEventListener('click', (e) => {
   e.preventDefault()
   getDeptValue()
-  // == resets previous values if changing drop downs ==
+  // == resets of previous menu if changing drop downs ==
   document.querySelector('#select-medium').value = document.querySelector('#med-default').value;
 });
 
@@ -120,7 +123,7 @@ const medButton = document.querySelector('#submit-medium');
 medButton.addEventListener('click', (e) => {
   e.preventDefault()
   getMedValue()
-  // == resets previous values if changing drop downs ==
+  // == resets default of previous menu if changing drop downs ==
   document.querySelector('#select-dept').value = document.querySelector('#dept-default').value;
 });
 
@@ -140,9 +143,15 @@ function createArtInfo(data) {
 
   const artImage = document.createElement('img');
   artImage.classList.add('art-image');
-  artImage.src = `https://www.artic.edu/iiif/2/${data.image_id}/full/843,/0/default.jpg`;
-  artImage.alt = `image of ${data.classification_title}`;
-  artDiv.append(artImage);
+  if (data.image_id !== null) {
+    artImage.src = `https://www.artic.edu/iiif/2/${data.image_id}/full/843,/0/default.jpg`;
+    artImage.alt = `image of ${data.classification_title}`;
+    artDiv.append(artImage);
+  } else {
+    artImage.alt = `image of work not provided`;
+    artDiv.append(artImage);
+  }
+
 
   const artistDateTitle = document.createElement('h4');
   artistDateTitle.classList.add('artist-with-date');
@@ -177,7 +186,6 @@ function createArtInfo(data) {
     artDiv.append(originPTag)
   }
 
-  // console.log(artDiv);
   // STEP7 APPEND IMAGE TAGS AND INFO TO DOM
   resultsDiv.append(artDiv);
 }

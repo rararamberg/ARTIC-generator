@@ -1,5 +1,5 @@
+/* ====  ALL  ==== */
 * {
-  /* border: 1px solid black; */
   box-sizing: border-box;
 }
 
@@ -9,12 +9,10 @@ body {
   padding: 0;
   border: 0;
   background-color: #AB9992;
-  /* font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; */
 }
 
-/* HEADER */
+
+/* =====  HEADER  ====== */
 header {
   height: auto;
   background-color: black;
@@ -31,9 +29,6 @@ header {
   height: 225px;
   background-image: url("https://chicagoculturalalliance.org/wp-content/uploads/2018/04/Art-Institute.png");
   background-size: contain;
-  /* position: relative;
-  top: 90px;
-  left: 5px; */
   margin: 0px 60px 10px 0px;
 }
 
@@ -44,9 +39,6 @@ header {
   padding: 200px 10px 10px 10px;
   width: 84%;
   min-height: 400px;
-  /* position: relative;
-  top: -195px;
-  right: -275px; */
   margin: 0px 0px 10px 0px;
 }
 
@@ -62,7 +54,8 @@ header {
   color: #ffffff;
 }
 
-/* MAIN */
+
+/* =====   MAIN   ===== */
 button {
   background: black;
   color: #ffffff;
@@ -77,6 +70,7 @@ button:hover {
   background: #B50938;
   font-family: 'Zen Dots', cursive;
 }
+
 form {
   background-color: #AB9992;;
   width: fit-content;
@@ -84,7 +78,6 @@ form {
   height: 300px;
   margin: 0 10px 20px 0;
 }
-
 
 select {
   width: 175px;
@@ -110,7 +103,6 @@ form p {
 
 .artwork-box h3 {
   font-style: italic;
-  /* font-weight: bolder; */
   max-width: 300px;
 }
 
@@ -139,10 +131,6 @@ form p {
   height: 700px;
   background-color: #797573;
   padding: 25px;
-  /* position: relative;
-  left: 0%;
-  bottom: 200px;
-  margin: 0  0  0 auto; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -152,16 +140,12 @@ form p {
   overflow: scroll;
 }
 
-/* FOOTER */
+/* ======  FOOTER  ======= */
 footer {
   text-align: center;
   background-color: #B50938;
   padding: 35px 10px 10px 10px;
   margin: 0;
-  /* height: 100px; */
-  /* min-width: 100%; */
-  /* position: relative;
-  bottom: 0%; */
 }
 
 li {
@@ -196,6 +180,7 @@ li p {
 
 /* ==========   MEDIA QUERIES   ==============*/
 
+/* ===  1586px === */
 @media screen and (max-width: 1586px) {
   .page-heading {
     width: 100%;
@@ -203,9 +188,8 @@ li p {
   }
 }
 
+/* ===  1515px === */
 @media screen and (max-width: 1515px) {
-
-
   .results-box {
     width: 100%;
     margin-bottom: 10px;
@@ -240,7 +224,7 @@ li p {
 }
 
 
-
+/* ===  768px === */
 @media screen and (max-width: 768px) {
   .page-heading {
     min-height: 250px;
@@ -256,14 +240,12 @@ li p {
     padding: 10px 20px 10px 5px;
   }
 
- 
   li p {
     font-size: 16px;
   }
-
-
 }
 
+/* ===  625px === */
 @media screen and (max-width: 625px) {
   .artic-icon {
     width: 200px;
@@ -283,8 +265,6 @@ li p {
     width: 205px;
   }
 
- 
-
   .menu-container {
     display: flex;
     flex-direction: column;
@@ -297,6 +277,5 @@ li p {
   .icon a, img {
     height: 35px;
     width: auto;
-    /* background-color: white; */
-}
+  }
 }

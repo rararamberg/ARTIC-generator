@@ -216,7 +216,7 @@ Note: 'Identifier' = image_id
             "last_updated": "2021-04-17T00:31:21-05:00",
             "timestamp": "2021-04-17T15:10:22-05:00"
         },
-}
+
 ```
 
 ## Wireframes
@@ -275,30 +275,44 @@ This schedule will be used to keep track of my progress throughout the week and 
 
 | Component      | Priority | Estimated Time | Time Invested | Actual Time |
 | ---            | :---:    |  :---:         | :---:         | :---:       |
-| Core Application Structure (HTML, CSS, etc.) | H        |4.5hrs           | 3hrs        | Xhrs      |
-| Pseudocode JS Steps                          | H        |1.0hrs           | .5hrs        | Xhrs      |
-| JS: API request for Dropdowns                | H        |2.0hrs           | 2hrs        | Xhrs      |
-| JS: Append Data to Option Tags in Dropdowns  | H        |2.5hrs           | 2hrs        | Xhrs      |
-|JS: Get Option Values in Drop Down Menu       | H        |2.5hrs           | 1hrs        | Xhrs      |
-|JS: Drop Down Menu Event Handlers             | H        |2.0hrs           | 1hrs        | Xhrs      |
-| JS: Get values for Result artwork info       | H        |3.5hrs           | 2hrs        | Xhrs      |
-|JS: API Image request for Artwork image tags  | H        |4.0hrs           | .5hrs        | Xhrs      |
-|JS:  Append Results to DOM                    | H        |4.0hrs           | 2hrs        | Xhrs      |
-|JS: Remove Previous Results                   | H        |2.0hrs           | 1hrs        | Xhrs      |
-|CSS: Flex and Media Queries                   | H        |4.5hrs           | 7.5hrs        | Xhrs      |
-|Testing MVP Requirements                      | H/M      |1.5hrs           | 1hrs        | Xhrs      |
-| Post-MVP and Advanced CSS                    | L        |6.5hrs           | 6hrs        | Xhrs      |
-| Total | H | 40.5hrs| 22.5hrs | Xhrs |
+| Core Application Structure (HTML, CSS, etc.) | H        |4.5hrs           | 3hrs        | 3hrs      |
+| Pseudocode JS Steps                          | H        |1.0hrs           | .5hrs        | .5hrs      |
+| JS: API request for Dropdowns                | H        |2.0hrs           | 2hrs        | 2hrs      |
+| JS: Append Data to Option Tags in Dropdowns  | H        |2.5hrs           | 2hrs        | 2hrs      |
+|JS: Get Option Values in Drop Down Menu       | H        |2.5hrs           | 1hrs        | 1hrs      |
+|JS: Drop Down Menu Event Handlers             | H        |2.0hrs           | 1hrs        | 1hrs      |
+| JS: Get values for Result artwork info       | H        |3.5hrs           | 2hrs        | 2hrs      |
+|JS: API Image request for Artwork image tags  | H        |4.0hrs           | .5hrs        | .5hrs      |
+|JS:  Append Results to DOM                    | H        |4.0hrs           | 2hrs        | 2hrs      |
+|JS: Remove Previous Results                   | H        |2.0hrs           | 1hrs        | 1hrs      |
+|CSS: Flex and Media Queries                   | H        |4.5hrs           | 7.5hrs        | 7.5hrs      |
+|Testing MVP Requirements                      | H/M      |1.5hrs           | 1hrs        | 1hrs      |
+| Post-MVP and Advanced CSS                    | L        |6.5hrs           | 6hrs        | 6hrs      |
+| Total | H | 40.5hrs| 29.5hrs | 29.5hrs |
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+If a user were to switch drop down menus, I wanted that previous menu to reset to its default. I found it to be an improved UX to help bookmark where user is by what current category user is retrieving artworks from.  
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+const deptButton = document.querySelector('#submit-dept');
+deptButton.addEventListener('click', (e) => {
+  e.preventDefault()
+  getDeptValue()
+  // == resets previous values if changing drop downs ==
+  document.querySelector('#select-medium').value = document.querySelector('#med-default').value;
+});
+
+const medButton = document.querySelector('#submit-medium');
+medButton.addEventListener('click', (e) => {
+  e.preventDefault()
+  getMedValue()
+  // == resets previous values if changing drop downs ==
+  document.querySelector('#select-dept').value = document.querySelector('#dept-default').value;
+});
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+ I changed the category menu to medium since the category ids had either a lot of overlap with department ids or nulls. Some PMVPS I didn't get to, but I decided to keep out the hamburger menu as I believe keeping the drop down menu and ARTIC icon in view was more appealing and easier to navigate. 
+
+At first I created the HTML elements for each resulted artwork div within backticks using string interpolation to pull individual endpoints and appending with insertAdjacentHTML() . Because this API is continoually being updated, I ran across some artworks that had null endpoints (ex: artist title or medium). To make code cleaner while also erasing or replacing endpoints with null, I went back and rewrote that section of code by creating the HTML elements with assigning variables to document.createElement(), using if/else statements to filter out null ids, textContent, and appending each HTML element to artDiv.
